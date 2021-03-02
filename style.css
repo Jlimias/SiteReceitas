@@ -31,6 +31,7 @@ p, ul, ol, li, b, p, h2 {
 }
 
 section {
+    padding:10px;
     max-width: 800px;
     margin: 0px auto 20px auto;
 }
@@ -62,25 +63,20 @@ section::before, section::after {
 section img {
     margin-top: 20px;
     max-width: 100%;
-}
-
-@media (max-width: 600px) {
-    .item-section, .img-section, .text-section {
-        width: 100%;
-    }
-    .img-section {
-        display: none;
-    }
+    
 }
 
 #menu {
     width: 100%;
     padding: 5px;
-    margin: 5px;
+    margin: 0px;
+    border: 2px;
     text-align: center;
     z-index: 99;
     position: fixed;
     top: 0px;
+    z-index: 2;
+    background-color: lightgrey;
 }
 
 #menu ul li {
@@ -99,12 +95,14 @@ section img {
     position: absolute;
     width: 100%;
     padding: 5px;
-    margin: 5px;
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
     position: fixed;
     text-decoration: none;
     text-transform: uppercase;
+    z-index: 2;
+    background-color: lightgrey; 
 }
 
 #footer2 {
@@ -127,6 +125,8 @@ section img {
     top: 0px;
 }
 
+
+
 #float {
 
     position: fixed;
@@ -137,6 +137,21 @@ section img {
   
 }
 
-.imagem {
+img {
     text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+iframe {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (max-width: 600px) {
+    .item-section, .img-section, .text-section, .imagem {
+        width: 100%;
+    }
+    .img-section {
+        visibility: visible;
+    }
 }
